@@ -1,0 +1,8 @@
+{% extends 'layout.html' %} {% block body %}
+<p>Predicted Skin Lesion:</p>
+<ul>
+  {% for key, value in results.items() %}
+  <li>{{ key }} : {{value}} %</li>
+  {% endfor %}
+</ul>
+{% endblock %}
