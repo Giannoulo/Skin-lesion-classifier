@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>Mole Shaman | Upload and Diagnose Dermoscopic Images</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/app.css')}}" />
   </head>
   <body>
-    <h1><a href="/">Mole Shaman</a></h1>
-    {% block body %}{% endblock %}
+    <div class="container">
+      <div class="row">
+        <div class="col align-self-center" id="heading-col">
+          <br />
+          <h1><a style="text-decoration: none;" href="/">Mole Shaman</a></h1>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col ">
+          <div id="body-col">{% block body %}{% endblock %}</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
