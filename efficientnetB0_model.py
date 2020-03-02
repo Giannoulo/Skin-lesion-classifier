@@ -7,7 +7,10 @@ def load_EfficientnetB0(rootPath):
     import efficientnet.keras
 
     model_path = os.path.join(rootPath, 'static/models')
-    model = load_model(os.path.join(model_path, '2243220.h5'))
+    # model = load_model(os.path.join(model_path, '2243220.h5'))
+    # model = load_model(os.path.join(model_path, 'full_final_224_32_49_balanced.h5'))
+    model = load_model(os.path.join(
+        model_path, 'full_224_32_49_imbalanced.h5'))
 
     return model
 

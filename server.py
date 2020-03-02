@@ -2,11 +2,13 @@ import os
 from flask import Flask, flash, render_template, redirect, request, url_for, send_file
 import efficientnetB0_model
 import tensorflow as tf
+# from flask_bootstrap import Bootstrap
 
 # App config
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "supertopsecretprivatekey"
 app.config['UPLOAD_FOLDER'] = '/tmp/'
+# Bootstrap(app)
 
 # Get the tf graph
 global graph
